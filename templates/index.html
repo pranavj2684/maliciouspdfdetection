@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Malicious File Detector</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script src="./script.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Malicious PDF Detector <span> with Deep Neural Network</span></h1>
+
+<!-- <div class="custom-file-upload"> -->
+    <!--<label for="file">File: </label>--> 
+    <!-- <input class="form-control" type="file" id="file" name="myfile" multiple />
+    <input class="btn btn btn-primary mt-3" type="submit" value="Predict Maliciousness">
+
+</div> -->
+
+<form class="p-3 text-center" action="/", method="post" enctype="multipart/form-data">
+    <input class="form-control" type="file" name="pdffile">
+    <input class="btn btn btn-primary mt-3" type="submit" value="Predict Maliciousness">
+</form>
+
+<!-- {% if prediction %}
+  <p class="text-center">Prediction is {{prediction}}</p>
+{% endif %} -->
+
+<!-- {% for each in prediction %}
+  <p id="normal_search"> {{each}} </p>
+{% endfor %} -->
+
+<!-- <script>
+function init() {
+document.getElementById("normal_search").value = "";
+}
+window.onload = init;
+
+</script> -->
+
+<h3>Total Files: {{ total_files }}</h3>
+<h3>Malicious Files: {{ malicious_files }}</h3>
+<h3>Non Malicious Files: {{ non_maliciousfiles }}</h3>
+
+<!-- <p>See the <a href="https://codepen.io/wallaceerick/pen/ctsCz">Custom Select Menu</a> demo!</p> -->
+<!-- partial -->
+  
+
+</body>
+</html>
